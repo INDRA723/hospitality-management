@@ -23,8 +23,7 @@ const ViewMyAppointment = () => {
 
   const retrieveAllAppointments = async () => {
     const response = await axios.get(
-      "https://hospitality-management-6gzz.onrender.com
-/api/appointment/patient/id?patientId=" + patient.id
+      "https://hospitality-management-6gzz.onrender.com/api/appointment/patient/id?patientId=" + patient.id
     );
     console.log(response.data);
     return response.data;
@@ -33,8 +32,7 @@ const ViewMyAppointment = () => {
   const cancelAppointment = (appointmentId) => {
     console.log(appointmentId);
     console.log("ghittinh api ** ");
-    fetch("https://hospitality-management-6gzz.onrender.com
-/api/appointment/patient/update", {
+    fetch("https://hospitality-management-6gzz.onrender.com/api/appointment/patient/update", {
       method: "POST",
       headers: {
         Accept: "application/json",

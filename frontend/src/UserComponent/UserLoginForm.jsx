@@ -17,8 +17,7 @@ const UserLoginForm = () => {
   };
 
   const loginAction = (e) => {
-    fetch("https://hospitality-management-6gzz.onrender.com
-/api/user/login", {
+    fetch("https://hospitality-management-6gzz.onrender.com/api/user/login", {
       method: "POST",
       headers: {
         Accept: "application/json",

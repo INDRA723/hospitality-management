@@ -17,15 +17,13 @@ const ViewAllPatient = () => {
   }, []);
 
   const retrieveAllPatient = async () => {
-    const response = await axios.get("https://hospitality-management-6gzz.onrender.com
-/api/patient/all");
+    const response = await axios.get("https://hospitality-management-6gzz.onrender.com/api/patient/all");
     console.log(response.data);
     return response.data;
   };
 
   const deletePatient = (patientId) => {
-    fetch("https://hospitality-management-6gzz.onrender.com
-/api/user/delete/id?userId=" + patientId, {
+    fetch("https://hospitality-management-6gzz.onrender.com/api/user/delete/id?userId=" + patientId, {
       method: "GET",
       headers: {
         Accept: "application/json",

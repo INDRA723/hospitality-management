@@ -39,23 +39,20 @@ const UserRegister = () => {
   const [specialists, setSpecialists] = useState([]);
 
   const retrieveAllGenders = async () => {
-    const response = await axios.get("https://hospitality-management-6gzz.onrender.com
-/api/user/gender");
+    const response = await axios.get("https://hospitality-management-6gzz.onrender.com/api/user/gender");
     return response.data;
   };
 
   const retrieveAllBloodGroups = async () => {
     const response = await axios.get(
-      "https://hospitality-management-6gzz.onrender.com
-/api/patient/bloodgroup/all"
+      "https://hospitality-management-6gzz.onrender.com/api/patient/bloodgroup/all"
     );
     return response.data;
   };
 
   const retrieveAllSpecialist = async () => {
     const response = await axios.get(
-      "https://hospitality-management-6gzz.onrender.com
-/api/doctor/specialist/all"
+      "https://hospitality-management-6gzz.onrender.com/api/doctor/specialist/all"
     );
     return response.data;
   };
@@ -89,8 +86,7 @@ const UserRegister = () => {
 
   const saveUser = (event) => {
     event.preventDefault();
-    fetch("https://hospitality-management-6gzz.onrender.com
-/api/user/register", {
+    fetch("https://hospitality-management-6gzz.onrender.com/api/user/register", {
       method: "POST",
       headers: {
         Accept: "application/json",

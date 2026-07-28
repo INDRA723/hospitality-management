@@ -19,8 +19,7 @@ const ViewAllAppointment = () => {
 
   const retrieveAllAppointments = async () => {
     const response = await axios.get(
-      "https://hospitality-management-6gzz.onrender.com
-/api/appointment/all"
+      "https://hospitality-management-6gzz.onrender.com/api/appointment/all"
     );
     console.log(response.data);
     return response.data;
