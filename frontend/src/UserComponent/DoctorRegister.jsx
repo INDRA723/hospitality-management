@@ -34,7 +34,8 @@ const DoctorRegister = () => {
   const [specialists, setSpecialists] = useState([]);
 
   const retrieveAllGenders = async () => {
-    const response = await axios.get("http://localhost:8080/api/user/gender");
+    const response = await axios.get("https://hospitality-management-6gzz.onrender.com
+/api/user/gender");
     return response.data;
   };
 
@@ -84,7 +85,8 @@ const DoctorRegister = () => {
     formData.append("experience", user.experience);
 
     axios
-      .post("http://localhost:8080/api/doctor/register", formData)
+      .post("https://hospitality-management-6gzz.onrender.com
+/api/doctor/register", formData)
       .then((result) => {
         result.json().then((res) => {
           console.log(res);

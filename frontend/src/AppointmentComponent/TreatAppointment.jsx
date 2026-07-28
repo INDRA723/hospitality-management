@@ -16,7 +16,8 @@ const TreatAppointment = () => {
   const [prescription, setPrescription] = useState("");
   
   const retrieveAppointment = async () => {
-    const response = await axios.get("http://localhost:8080/api/appointment/id?appointmentId="+appointmentId);
+    const response = await axios.get("https://hospitality-management-6gzz.onrender.com
+/api/appointment/id?appointmentId="+appointmentId);
     return response.data;
   };
 
@@ -40,7 +41,8 @@ const TreatAppointment = () => {
     formData.append("status", status);
 
     axios
-      .post("http://localhost:8080/api/appointment/doctor/update", formData)
+      .post("https://hospitality-management-6gzz.onrender.com
+/api/appointment/doctor/update", formData)
       .then((result) => {
         result.json().then((res) => {
           console.log(res);

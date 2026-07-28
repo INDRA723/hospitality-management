@@ -17,13 +17,15 @@ const ViewAllDoctor = () => {
   }, []);
 
   const retrieveAllDoctor = async () => {
-    const response = await axios.get("http://localhost:8080/api/doctor/all");
+    const response = await axios.get("https://hospitality-management-6gzz.onrender.com
+/api/doctor/all");
     console.log(response.data);
     return response.data;
   };
 
   const deleteDoctor = (doctorId) => {
-    fetch("http://localhost:8080/api/user/delete/id?userId=" + doctorId, {
+    fetch("https://hospitality-management-6gzz.onrender.com
+/api/user/delete/id?userId=" + doctorId, {
       method: "GET",
       headers: {
         Accept: "application/json",
@@ -78,7 +80,8 @@ const ViewAllDoctor = () => {
                       <td>
                         <img
                           src={
-                            "http://localhost:8080/api/user/" +
+                            "https://hospitality-management-6gzz.onrender.com
+/api/user/" +
                             doctor.doctorImage
                           }
                           class="img-fluid"

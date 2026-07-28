@@ -16,7 +16,8 @@ const AssignAppointment = () => {
 
   const retrieveAppointment = async () => {
     const response = await axios.get(
-      "http://localhost:8080/api/appointment/id?appointmentId=" + appointmentId
+      "https://hospitality-management-6gzz.onrender.com
+/api/appointment/id?appointmentId=" + appointmentId
     );
     return response.data;
   };
@@ -41,7 +42,8 @@ const AssignAppointment = () => {
   }, []);
 
   const retrieveAllDoctor = async () => {
-    const response = await axios.get("http://localhost:8080/api/doctor/all");
+    const response = await axios.get("https://hospitality-management-6gzz.onrender.com
+/api/doctor/all");
     console.log(response.data);
     return response.data;
   };
@@ -53,7 +55,8 @@ const AssignAppointment = () => {
 
     axios
       .post(
-        "http://localhost:8080/api/appointment/admin/assign/doctor",
+        "https://hospitality-management-6gzz.onrender.com
+/api/appointment/admin/assign/doctor",
         formData
       )
       .then((result) => {

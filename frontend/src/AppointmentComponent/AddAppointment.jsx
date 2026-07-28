@@ -19,7 +19,8 @@ const AddAppointment = () => {
 
   const saveAppointment = (event) => {
     event.preventDefault();
-    fetch("http://localhost:8080/api/appointment/patient/add", {
+    fetch("https://hospitality-management-6gzz.onrender.com
+/api/appointment/patient/add", {
       method: "POST",
       headers: {
         Accept: "application/json",
