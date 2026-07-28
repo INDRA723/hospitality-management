@@ -8,8 +8,7 @@ const HomePage = () => {
   const [allDoctor, setAllDoctor] = useState([]);
 
   const retrieveAllDoctor = async () => {
-    const response = await axios.get("https://hospitality-management-6gzz.onrender.com
-/api/doctor/all");
+    const response = await axios.get("https://hospitality-management-6gzz.onrender.com/api/doctor/all");
     console.log(response.data);
     return response.data;
   };

@@ -1,0 +1,85 @@
+# Query: \\.com\\n/ap
+# Flags: RegExp
+# ContextLines: 1
+
+18 results - 8 files
+
+src\AppointmentComponent\AssignAppointment.jsx:
+  18      const response = await axios.get(
+  19:       "https://hospitality-management-6gzz.onrender.com/api/appointment/id?appointmentId=" + appointmentId
+  21      );
+
+  44    const retrieveAllDoctor = async () => {
+  45:     const response = await axios.get("https://hospitality-management-6gzz.onrender.com/api/doctor/all");
+  47      console.log(response.data);
+
+  57        .post(
+  58:         "https://hospitality-management-6gzz.onrender.com /api/appointment/admin/assign/doctor",
+  60          formData
+
+src\AppointmentComponent\TreatAppointment.jsx:
+  18    const retrieveAppointment = async () => {
+  19:     const response = await axios.get("https://hospitality-management-6gzz.onrender.com/api/appointment/id?appointmentId="+appointmentId);
+  21      return response.data;
+
+  43      axios
+  44:       .post("https://hospitality-management-6gzz.onrender.com/api/appointment/doctor/update", formData)
+  46        .then((result) => {
+
+src\AppointmentComponent\ViewAllAppointment.jsx:
+  21      const response = await axios.get(
+  22:       "https://hospitality-management-6gzz.onrender.com/api/appointment/all"
+  24      );
+
+src\AppointmentComponent\ViewMyAppointment.jsx:
+  25      const response = await axios.get(
+  26:       "https://hospitality-management-6gzz.onrender.com/api/appointment/patient/id?patientId=" + patient.id
+  28      );
+
+  35      console.log("ghittinh api ** ");
+  36:     fetch("https://hospitality-management-6gzz.onrender.com/api/appointment/patient/update", {
+  38        method: "POST",
+
+src\UserComponent\UserLoginForm.jsx:
+  19    const loginAction = (e) => {
+  20:     fetch("https://hospitality-management-6gzz.onrender.com/api/user/login", {
+  22        method: "POST",
+
+src\UserComponent\UserRegister.jsx:
+  41    const retrieveAllGenders = async () => {
+  42:     const response = await axios.get("https://hospitality-management-6gzz.onrender.com/api/user/gender");
+  44      return response.data;
+
+  48      const response = await axios.get(
+  49:       "https://hospitality-management-6gzz.onrender.com/api/patient/bloodgroup/all"
+  51      );
+
+  56      const response = await axios.get(
+  57:       "https://hospitality-management-6gzz.onrender.com/api/doctor/specialist/all"
+  59      );
+
+  91      event.preventDefault();
+  92:     fetch("https://hospitality-management-6gzz.onrender.com/api/user/register", {
+  94        method: "POST",
+
+src\UserComponent\ViewAllDoctor.jsx:
+  19    const retrieveAllDoctor = async () => {
+  20:     const response = await axios.get("https://hospitality-management-6gzz.onrender.com/api/doctor/all");
+  22      console.log(response.data);
+
+  26    const deleteDoctor = (doctorId) => {
+  27:     fetch("https://hospitality-management-6gzz.onrender.com/api/user/delete/id?userId=" + doctorId, {
+  29        method: "GET",
+
+  82                            src={
+  83:                             "https://hospitality-management-6gzz.onrender.com/api/user/" +
+  85                              doctor.doctorImage
+
+src\UserComponent\ViewAllPatient.jsx:
+  19    const retrieveAllPatient = async () => {
+  20:     const response = await axios.get("https://hospitality-management-6gzz.onrender.com/api/patient/all");
+  22      console.log(response.data);
+
+  26    const deletePatient = (patientId) => {
+  27:     fetch("https://hospitality-management-6gzz.onrender.com/api/user/delete/id?userId=" + patientId, {
+  29        method: "GET",
